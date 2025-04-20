@@ -1,3 +1,33 @@
+import StarIcon from "@/assets/icons/star.svg"
+const words=[
+  "Performant",
+  "Scalable",
+  "Reliable",
+  "Secure",
+  "Accessible",
+  "UserFriendly",
+  "Customizable",
+  "Innovative",
+  "Efficient",
+   "Flexible",
+  "Responsive",
+];
+
+
 export const TapeSection = () => {
-  return <div>Tape Section</div>;
+  return <div className=" py-16 lg:py-20 overflow-x-clip">
+    <div className=" bg-gradient-to-r from-emerald-300 to-sky-400  -rotate-3 -mx-1">
+    <div className=" flex gap-4 py-3 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      {
+        words.map((word)=>(
+            <div key={word} className=" inline-flex gap-4 items-center">
+              <span className=" text-gray-900 uppercase font-extrabold text-sm">{word}</span>
+              <StarIcon className=" size-6 text-gray-900 -rotate-12"/>
+              </div>
+        ))
+      }
+      </div>
+    </div>
+
+  </div>;
 };
