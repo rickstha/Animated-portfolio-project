@@ -99,7 +99,9 @@ export const AboutSection = () => {
     <div className=" container">
     <SectionHeader eyebrow="About Us" title="A Glimpse Into Our world" desc="Learn more about who we are, what we do and what inspires me!"/>
     <div className=" mt-20 flex flex-col gap-8">
-      <Card className=" h-[320px]">
+
+      <div className=" grid grid-cols-1 gap-8 md:grid md:grid-cols-5 lg:grid-cols-3">
+      <Card className=" h-[320px] md:col-span-2 lg:col-span-1">
         <CardHeader title="Books" desc="Explore the books shaping our perspectives."/>
        
         <div className=" w-40 mx-auto mt-8">
@@ -108,17 +110,18 @@ export const AboutSection = () => {
       </Card>
 
       {/* toolbox start */}
-      <Card className=" h-[320px] p-0">
+      <Card className=" h-[320px] p-0 md:col-span-3 lg:col-span-2">
       <CardHeader className=" px-6 pt-6" title="Our Toolbox" desc="Explore the technologies and tools to craft exceptional digital experiences."/>
         
       <ToolboxItems items={toolboxItems} className=" mt-6"/>
       <ToolboxItems items={toolboxItems} className=" mt-6 " itemsWrapperClassName="-translate-x-1/2"/>
 
       </Card>
+      </div>
 
 {/* beyond the code start */}
-
-      <Card className=" h-[320px] p-0 flex flex-col">
+      <div className=" grid grid-cols-1 md:grid md:grid-cols-5 gap-8">
+      <Card className=" h-[320px] p-0 flex flex-col col-span-3">
       <CardHeader title="Beyond the Code" desc="Explore my interests and hobbies beyond the digital experiences." className="px-6 py-6"/>
        
         <div className=" relative flex-1">
@@ -140,13 +143,14 @@ export const AboutSection = () => {
 
 {/* map start */}
 
-      <Card className=" h-[320px] p-0 relative">
+      <Card className=" h-[320px] p-0 relative col-span-2">
         <Image src={mapImage} alt="map" className=" h-full w-full object-cover"/>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 
         after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
         <Image src={smileEmoji} alt="smile" />
         </div>
       </Card>
+      </div>
     </div>
     </div>
   </div>;
