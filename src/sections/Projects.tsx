@@ -54,12 +54,12 @@ export const ProjectsSection = () => {
         <SectionHeader eyebrow="Real-world Results" title="Our Works" desc="See how we transformed concepts into engaging digital experiences."/>
        
         <div className=" flex flex-col mt-10 md:mt-20 gap-6">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project,projectIndex) => (
             <div
               key={project.title}
-              className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 bg-gray-800 rounded-3xl overflow-hidden relative z-0 
-        after:content-[''] after:z-10 after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:outline-white/20 after:rounded-3xl after:pointer-events-none"
-            >
+              className=" sticky px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 bg-gray-800 rounded-3xl overflow-hidden relative z-0 
+        after:content-[''] after:z-10 after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:outline-white/20 after:rounded-3xl after:pointer-events-none "
+            style={{top:`calc(64px + ${projectIndex*40}px)`}}>
               <div
                 className=" absolute inset-0 -z-10 opacity-5"
                 style={{

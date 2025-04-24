@@ -9,7 +9,7 @@ import SparkleIcon from "@/assets/icons/sparkle.svg"
 export const HeroSection = () => {
   return (
     <div className=" py-20 md:py-32 lg:py-40 relative z-0 overflow-x-clip">
-      <div className=" absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className=" absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
       {/* main hero section animation code */}
       <div
         className=" absolute inset-0 -z-30 opacity-5"
@@ -21,7 +21,7 @@ export const HeroSection = () => {
       <div className=" size-[1220px] hero-ring"></div>
       {/* star code start */}
       <HeroOrbit size={800} rotation={-45}>
-      <StarIcon className=" size-28 text-emerald-300"/>
+      <StarIcon className=" size-20 text-emerald-300"/>
       </HeroOrbit>
       <HeroOrbit size={550} rotation={20}>
       <StarIcon className=" size-12 text-emerald-300"/>
@@ -57,7 +57,9 @@ export const HeroSection = () => {
         <div className=" flex flex-col items-center">
           <Image src={memojiImage} alt="memoji" className=" size-[100px]" />
           <div className=" bg-gray-950 border border-gray-800 px-4 py-1.5 flex items-center gap-4 rounded-lg">
-            <div className=" bg-green-500 size-2.5 rounded-full"></div>
+            <div className=" bg-green-500 size-2.5 rounded-full relative">
+            <div className=" bg-green-500 rounded-full absolute inset-0 animate-ping"></div>
+            </div>
             <div className=" text-sm font-medium">
               Available for new projects
             </div>
