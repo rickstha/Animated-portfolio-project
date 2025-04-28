@@ -50,7 +50,7 @@ export const HeroSection = () => {
       <HeroOrbit size={650} rotation={-5}>
     <div className="size-2 rounded-full bg-emerald-300/20"></div>
       </HeroOrbit>
-
+    {/* animation is remaining */}
       {/* star code end */}
       </div>
       <div className="container">
