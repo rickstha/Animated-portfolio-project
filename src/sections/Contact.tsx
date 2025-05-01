@@ -9,9 +9,9 @@ export const ContactSection = () => {
     }}></div>
     <div className=" flex flex-col md:flex-row items-center gap-8">
       <div>
-    <h2 className=" font-serif text-2xl md:text-3xl">Let's create something amazing together</h2>
+    <h2 className=" font-serif text-2xl md:text-3xl">Let&apos;s create something amazing together</h2>
     <p className=" text-sm mt-2 md:text-base">
-      Ready to bring your ideas to life? Let's connect and discuss how we can work together to create something amazing. Whether you have a project in mind or just want to chat, I'm here to help.
+      Ready to bring your ideas to life? Let&apos;s connect and discuss how we can work together to create something amazing. Whether you have a project in mind or just want to chat, I&apos;m here to help.
     </p>
     </div>
     <div>
